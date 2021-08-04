@@ -119,9 +119,9 @@ void NAVE::mover()
 void NAVE::pintar_corazones()
 {
     gotoxy(50, 2);
-    printf("VIDAS %d", vidas);
+    printf("LIFE %d", vidas);
     gotoxy(64, 2);
-    printf("Salud");
+    printf("Health ");
     gotoxy(70, 2);
     printf("      ");
     for (int i = 0; i < corazones; i++)
@@ -224,7 +224,7 @@ void BALA::mover()
     printf(" ");
     y--;
     gotoxy(x, y);
-    printf("*");
+    printf("%c", 24);
 }
 
 bool BALA::fuera()
@@ -258,7 +258,7 @@ int main()
 
     while (!game_over)
     {
-        gotoxy(4,2); printf("PUNTOS: %d", puntos);
+        gotoxy(4,2); printf("SCORE: %d", puntos);
         if (_kbhit())
         {
             char tecla = _getch();
@@ -316,7 +316,7 @@ int main()
 
     }
 
-    gotoxy(35,16); printf("Fin del juego");
+    gotoxy(35,16); printf("GAME OVER");
     getch();
     return 0;
 }
