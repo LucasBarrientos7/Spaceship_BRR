@@ -6,9 +6,9 @@ A survival game where a ship makes its way through an asteroid field. Made entir
 An alien ship escapes from Earth in search of peace and encounters an asteroid field that threatens to return home.
 
 Ship Actions:
-Ship Flight -> Directional Keys
-Shot -> Space Bar
+- Ship Flight -> Directional Keys
+- Shot -> Space Bar
 
 Game rules:
 - The ship can dodge or destroy with its shot the atheroids that approach it.
-- Each asteroid generates score. 
+- Each asteroid destroyed generates score. 
