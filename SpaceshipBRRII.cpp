@@ -58,6 +58,7 @@ void pintar_limites()
     printf("%c", 188);
 }
 
+// Constructor de NAVE
 class NAVE
 {
     int x, y;
@@ -77,6 +78,7 @@ public:
     void morir();
 };
 
+// Dibuja la nave en pantalla
 void NAVE::pintar()
 {
     gotoxy(x, y);
