@@ -8,6 +8,7 @@ using namespace std;
 #define IZQUIERDA 75
 #define DERECHA 77
 #define ABAJO 80
+#define BARRA 32
 
 void gotoxy(int x, int y)
 {
@@ -262,7 +263,7 @@ int main()
         if (_kbhit())
         {
             char tecla = _getch();
-            if (tecla == 'a')
+            if (tecla == BARRA)
                 B.push_back(new BALA(N.X() + 2, N.Y() - 1));
         }
         // <-Correcion del error

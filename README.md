@@ -7,7 +7,7 @@ An alien ship escapes from Earth in search of peace and encounters an asteroid f
 
 Ship Actions:
 Ship Flight -> Directional Keys
-Shot -> Letter "a"
+Shot -> Space Bar
 
 Game rules:
 - The ship can dodge or destroy with its shot the atheroids that approach it.
