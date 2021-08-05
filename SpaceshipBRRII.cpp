@@ -89,6 +89,7 @@ void NAVE::pintar()
     printf("%c%c %c%c", 30, 190, 190, 30);
 }
 
+// Borra la nave de la pantalla
 void NAVE::borrar()
 {
     gotoxy(x, y);
@@ -99,6 +100,7 @@ void NAVE::borrar()
     printf("        ");
 }
 
+// Mueve la nave en la pantalla utilizando las flechas de direccion del teclado
 void NAVE::mover()
 {
     if (_kbhit())
@@ -120,6 +122,7 @@ void NAVE::mover()
     }
 }
 
+// Dibuja los corazones en pantalla
 void NAVE::pintar_corazones()
 {
     gotoxy(50, 2);
@@ -135,6 +138,7 @@ void NAVE::pintar_corazones()
     }
 }
 
+// Cuando la cantidad de corazones llega a cero, dibuja la explosion de la nave
 void NAVE::morir()
 {
     if (corazones == 0)
@@ -165,6 +169,7 @@ void NAVE::morir()
     }
 }
 
+// Constructor de Asteroide
 class AST
 {
     int x, y;
@@ -178,12 +183,14 @@ public:
     int Y() { return y; }
 };
 
+// Dibuja el asteroide en pantalla
 void AST::pintar()
 {
     gotoxy(x, y);
     printf("%c", 184);
 }
 
+// Mueve de manera descendente el asteroide por la pantalla
 void AST::mover()
 {
     gotoxy(x, y);
@@ -197,6 +204,7 @@ void AST::mover()
     pintar();
 }
 
+// Choque del Asteroide con la nave
 void AST::choque(NAVE &N)
 {
     if (x >= N.X() && x < N.X() + 6 && y >= N.Y() && y <= N.Y() + 2)
@@ -210,6 +218,7 @@ void AST::choque(NAVE &N)
     }
 }
 
+//Constructor de la Bala
 class BALA
 {
     int x, y;
@@ -222,6 +231,7 @@ public:
     bool fuera();
 };
 
+// Mueve la pantalla de manera ascendente de la Bala
 void BALA::mover()
 {
     gotoxy(x, y);
@@ -231,6 +241,7 @@ void BALA::mover()
     printf("%c", 24);
 }
 
+// Verifica si la bala salio fuera de la pantalla
 bool BALA::fuera()
 {
     if (y == 4)
