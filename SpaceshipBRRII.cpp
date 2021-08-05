@@ -21,8 +21,8 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(hCon, dwPos);
 }
 
-void OcultarCursor()
-{
+// Función para ocultar el cursor de la terminal
+void OcultarCursor(){
     HANDLE hCon;
     hCon = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cci;
@@ -31,6 +31,7 @@ void OcultarCursor()
     SetConsoleCursorInfo(hCon, &cci);
 }
 
+// Dibuja los limites del juego
 void pintar_limites()
 {
     for (int i = 2; i < 78; i++)
