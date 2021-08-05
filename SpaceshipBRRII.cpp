@@ -8,7 +8,6 @@ using namespace std;
 #define IZQUIERDA 75
 #define DERECHA 77
 #define ABAJO 80
-#define BARRA 32
 
 void gotoxy(int x, int y)
 {
@@ -122,7 +121,7 @@ void NAVE::pintar_corazones()
     gotoxy(50, 2);
     printf("LIFE %d", vidas);
     gotoxy(64, 2);
-    printf("Health");
+    printf("Health ");
     gotoxy(70, 2);
     printf("      ");
     for (int i = 0; i < corazones; i++)
@@ -263,7 +262,7 @@ int main()
         if (_kbhit())
         {
             char tecla = _getch();
-            if (tecla == BARRA)
+            if (tecla == 'a')
                 B.push_back(new BALA(N.X() + 2, N.Y() - 1));
         }
         // <-Correcion del error
